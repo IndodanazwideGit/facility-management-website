@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header section containing navigation and hero section -->
+    <header>
+        <nav>
+            <div class="nav-bar">
+                <!-- Website logo/title -->
+                <h2 class="nav-header"><a href="#home-page">Facility Management</a></h2>
+                <!-- Hamburger menu for mobile view -->
+                <div class="nav-toggle" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <!-- Navigation menu -->
+                <ul id="nav-menu">
+                    <li><a href="#home-page">Home</a></li>
+                    <!-- Dropdown menu for services -->
+                    <li class="dropdown">
+                        <a href="#services" class="dropdown-btn">Services</a>
+                        <div class="dropdown-content">
+                            <a href="#">User Management</a>
+                            <a href="#">Task Management</a>
+                            <a href="#">Reporting & Analytics</a>
+                            <a href="#">Communication Center</a>
+                        </div>
+                    </li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#footer">Contact</a></li>
+                    <li>
+                        <div class="container-input">
+                            <input type="text" placeholder="Search" name="text" class="input-search"/>
+                            <svg></svg>
+                        </div>
+                    </li>
+                    <li class="logging-btn"><a href="#login-section">Log In</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Hero section with welcome message and primary call-to-action -->
+        <section id="hero" class="home-page">
+            <div class="home-page-center">
+                <h1>Welcome to Facility Management</h1>
+                <p>The homepage serves as the entry point to the application and provides an overview of key functionalities.</p>
+                <a href="#" class="btn-primary">Explore Our Service</a>
+            </div>
+        </section>
+    </header>
+
+    <!-- Main content area -->
+    <main>
+        <!-- Services section -->
+        <section class="services" id="services">
+            <!-- Key features of the services -->
+            <div class="key-features">
+                <h2>Services</h2>
+                <div class="features-grid">
+                    <div class="feature-box">
+                        <img src="images\task.png" alt="Task Management Icon" class="feature-icon">
+                        <div class="feature-title">Task Management</div>
+                        <div class="feature-description">Efficiently create, assign, and track tasks for cleaners and security personnel with real-time updates and a user-friendly interface.</div>
+                    </div>
+                    <div class="feature-box">
+                        <img src="images\report.png" alt="Reporting Icon" class="feature-icon">
+                        <div class="feature-title">Reporting and Analytics</div>
+                        <div class="feature-description">Generate detailed reports and analytics to gain insights into operational performance and make data-driven decisions.</div>
+                    </div>
+                    <div class="feature-box">
+                        <img src="images\communication.png" alt="Communication Icon" class="feature-icon">
+                        <div class="feature-title">Communication Hub</div>
+                        <div class="feature-description">Centralize communication between administrators, workers, and customers to ensure seamless coordination and updates.</div>
+                    </div>
+                    <div class="feature-box">
+                        <img src="images\request.png" alt="Customer Request Icon" class="feature-icon">
+                        <div class="feature-title">Customer Request Submission</div>
+                        <div class="feature-description">Allow customers to easily submit requests for cleaning and security services with detailed specifications and requirements.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Statistics section -->
+            <div class="statistics-section">
+                <h2>Time Perfomance</h2>
+                
+                <div class="metrics-grid">
+
+                    <div class="card">
+                        <div class="image-box">
+                            <img src="images\building.jpg">
+                        </div>
+                        <div class="content">
+                            <p>
+                                <img src="images\report.png" alt="Task Completion Icon" class="metric-icon">
+                                <div class="metric-title">Task Completion Rate</div>
+                                <div class="metric-value" id="task-completion">85%</div>
+                                <div class="metric-description">Percentage of tasks completed on time.</div>
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="card">
+                        <div class="image-box">
+                            <img src="images\building.jpg">
+                        </div>
+                        <div class="content">
+                            <p>
+                                <img src="images\customer_care.png" alt="Customer Satisfaction Icon" class="metric-icon">
+                                <div class="metric-title">Customer Satisfaction</div>
+                                <div class="metric-value" id="customer-satisfaction">92%</div>
+                                <div class="metric-description">Average customer satisfaction score based on feedback.</div>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="image-box">
+                            <img src="images\building.jpg">
+                        </div>
+                        <div class="content">
+                            <p>
+                                <img src="images\cleaner.png" alt="Workforce Efficiency Icon" class="metric-icon">
+                                <img src="images\security.png" alt="Workforce Efficiency Icon" class="metric-icon">
+                                <div class="metric-title">Workforce Efficiency</div>
+                                <div class="metric-value" id="workforce-efficiency">78%</div>
+                                <div class="metric-description">Efficiency rate of the workforce in handling tasks.</div>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call-to-action section -->
+            <div class="cta-section">
+                <h2>Ready to Enhance Your Facility Management?</h2>
+                <div class="cta-buttons">
+                    <button class="cta-button primary" onclick="window.location.href='/submit-request'">Submit Service Request</button>
+                    <button class="cta-button secondary" onclick="window.location.href='/learn-more'">Learn More</button>
+                </div>
+            </div>
+        
+        </section>
+        <br>
+        <br>
+        <br>
+        <br>
+        <!-- About section -->
+        <section class="about" id="about">
+            <div class="about-header">
+                <h1>About Us</h1>
+                
+            </div>
+        
+            <div class="about-container">
+                <div class="about-section">
+                    <p>Learn more about our mission, vision, and team.</p>
+                    <h2>Our Mission</h2>
+                    <p>Our mission is to transform the way facility managers handle cleaners and security personnel across various facilities by providing efficient and innovative solutions.</p>
+                </div>
+        
+                <div class="about-section">
+                    <h2>Our Vision</h2>
+                    <p>Our vision is to set a new standard for facility management, ensuring safety and cleanliness through optimized resource allocation and exceptional service delivery.</p>
+                </div>
+        
+                <!-- Team members -->
+                <div class="about-section">
+                    <h2>Meet the Team</h2>
+                    <div class="team-member">
+                        <img src="images\bukeka.png" alt="Bukeka Nxumalo">
+                        <h3>Bukeka Nxumalo</h3>
+                        <p>Scrum Master</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="images\kwanele.png" alt="Amahle Mqadi">
+                        <h3>Kwanele Mahaye</h3>
+                        <p>Frontend Developer</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="images\siye.png" alt="Amahle Mqadi">
+                        <h3>Siyemukelwa Kheswa</h3>
+                        <p>Backend Developer</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="images\yolanda.png" alt="Amahle Mqadi">
+                        <h3>Amahle Mqadi</h3>
+                        <p>Frontend Developer</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="images\konke.png" alt="Amahle Mqadi">
+                        <h3>Konke Tekane</h3>
+                        <p>Database Administrator</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="images\gabela.png" alt="Amahle Mqadi">
+                        <h3>Amahle Gabela</h3>
+                        <p>Quality Assurance</p>
+                    </div>
+                </div>
+        
+                <div class="about-section">
+                    <h2>Our Story</h2>
+                    <p>Facility Management Solutions was founded in 2024 with the goal of improving facility management through technology. Over the years, we have achieved several milestones, including successfully developed and launched the prototype version of our Facility Management Application, demonstrating its core functionalities, incorporated valuable feedback from users and stakeholders to enhance the user experience and functionality of our application, and expanded our services to new regions and markets, catering to a wider range of clients and industries.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact section -->
+        <section class="contact">
+            <div class="about-header">
+                <h2>Send Us a Message</h2>
+            </div>
+        
+            <div class="contact-container">
+                <!-- Contact form -->
+                <div class="contact-section">
+                    <div class="contact-form">
+                        <form action="/submit-contact-form" method="post">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                            <input type="email" name="email" placeholder="Your Email" required>
+                            <input type="text" name="subject" placeholder="Subject" required>
+                            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                            <button type="submit">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+        
+                <!-- Map section -->
+                <div class="contact-section">
+                    <div class="map">
+                        <h2>Find Us Here</h2>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3460.9698335872445!2d31.01843951513518!3d-29.85770198194885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef6a62bf122fb3d%3A0x264ebeb6a9f0f21!2sDurban%2C%20South%20Africa!5e0!3m2!1sen!2sza!4v1620814742787!5m2!1sen!2sza" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Login section -->
+        <section class="login-section" id="login-section">
+            <div class="container" id="container">
+                <!-- Sign up form -->
+                <div class="form-container sign-up-container">
+                  <form id="signUpForm">
+                    <h1>Create Account</h1>
+                    <input type="text" placeholder="Name" id="name" required/>
+                    <input type="email" placeholder="Email" id="email" required/>
+                    <input type="tel" placeholder="Phone" id="phone" required/>
+                    <input type="password" placeholder="Password" id="password" required/>
+                    <button type="submit">Sign Up</button>
+                  </form>
+                </div>
+                <!-- Sign in form -->
+                <div class="form-container sign-in-container">
+                  <form id="signInForm">
+                    <h1>Sign In</h1>
+                    <input type="email" placeholder="Email" id="emailLogin" required/>
+                    <input type="password" placeholder="Password" id="passwordLogin" required/>
+                    <button type="submit">Sign In</button>
+                    <a href="#">Forgot your password?</a>
+                  </form>
+                </div>
+              
+                <!-- Overlay container for form transitions -->
+                <div class="overlay-container">
+                  <div class="overlay">
+                    <div class="overlay-panel overlay-left">
+                      <h1>Welcome Back!</h1>
+                      <p>To keep connected with us, please login with your personal info</p>
+                      <button class="ghost" id="signIn">Sign In</button>
+                    </div>
+                    <div class="overlay-panel overlay-right">
+                      <h1>Hello!</h1>
+                      <p>Enter your personal details and start journey with us</p>
+                      <button class="ghost" id="signUp">Sign Up</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </section>
+
+    </main>
+
+    <!-- Footer section -->
+    <footer id="footer">
+        <!-- Contact information in the footer -->
+        <div class="contact-section">
+            <div class="contact-info">
+                <h2>Contact Information</h2>
+                <p><strong>Phone:</strong> +27 31 123 4567</p>
+                <p><strong>Email:</strong> info@facilitymanagement.co.za</p>
+                <p><strong>Address:</strong> 123 Facility Street, Durban, South Africa</p>
+                <br>
+                <br>
+                <h2>Follow Us</h2>
+                <div class="social-media">
+                    <a href="https://twitter.com/yourprofile" target="_blank"><img src="images\twitter-alt.png" alt="Twitter"></a>
+                    <a href="https://instagram.com/yourprofile" target="_blank"><img src="images\instagram.png" alt="Instagram"></a>
+                    <a href="https://linkedin.com/yourprofile" target="_blank"><img src="images\linkedin.png" alt="LinkedIn"></a>
+                    <a href="https://gmail.com/yourprofile" target="_blank"><img src="images\email.png" alt="Email"></a>
+                </div>
+                <br>
+            </div>
+            
+        </div>
+
+        <!-- Footer copyright -->
+        <p>&copy; Facility Management. All Right Reserved</p>
+        <!-- Decorative waves in the footer -->
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+    </footer>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
