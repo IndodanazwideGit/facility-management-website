@@ -18,87 +18,176 @@ header {
 }
 nav {
     background: white;
-    padding: 10px 20px;
-    width: 100%;
-    height: 10vh;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-/*  Search bar  */
-.container-input {
+
+/* General styles for the navigation bar */
+.nav-bar {
+    display: flex; /* Displays the elements inside the nav-bar as a flex container */
+    justify-content: space-between; /* Distributes the child elements evenly along the main axis */
+    align-items: center; /* Centers the child elements along the cross axis */
+
+}
+  
+  /* Styles for the website logo/title */
+  .nav-header a {
+    color: black; /* Sets the text color for the logo/title */
+    text-decoration: none; /* Removes underline from the link */
+    font-size: 24px; /* Increases the font size */
+    font-weight: bold; /* Makes the text bold */
+  }
+  
+  /* Styles for the hamburger menu */
+  .nav-toggle {
+    display: none; /* Initially hidden for desktop view */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+  }
+  
+  .nav-toggle span {
+    display: block; /* Displays the spans as block elements */
+    width: 25px; /* Sets the width of the spans */
+    height: 3px; /* Sets the height of the spans */
+    background-color: #fff; /* Sets the background color of the spans */
+    margin-bottom: 5px; /* Adds spacing between the spans */
+  }
+  
+  /* Styles for the navigation menu */
+  #nav-menu {
+    display: flex; /* Displays the list items as a flex container */
+    list-style: none; /* Removes default bullet points */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+  }
+  
+  #nav-menu li {
+    position: relative; /* Positioning context for dropdown menu */
+  }
+  
+  #nav-menu li a {
+    display: block; /* Displays the links as block elements */
+    color: black; /* Sets the text color for the links */
+    text-decoration: none; /* Removes underline from the links */
+    padding: 10px 15px; /* Adds padding inside the links */
+    transition: background-color 0.3s ease; /* Adds a smooth transition for background color */
+    margin: 10px;
+    border-radius: 20px;
+}
+  
+  #nav-menu li a:hover {
+    background-color: gainsboro; /* Changes the background color on hover */
+    border-radius: 25px;
+}
+  
+  /* Styles for the dropdown menu */
+  .dropdown-content {
+    display: none; /* Initially hides the dropdown content */
+    position: absolute; /* Positions the dropdown content absolutely */
+    background-color: #f9f9f9; /* Sets the background color for the dropdown content */
+    min-width: 160px; /* Sets the minimum width for the dropdown content */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); /* Adds a drop shadow */
+    z-index: 1; /* Ensures the dropdown content appears on top */
+  }
+  
+  .dropdown-content a {
+    color: black; /* Sets the text color for the dropdown links */
+    padding: 12px 16px; /* Adds padding inside the dropdown links */
+    text-decoration: none; /* Removes underline from the dropdown links */
+    display: block; /* Displays the dropdown links as block elements */
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd; /* Changes the background color on hover for dropdown links */
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block; /* Shows the dropdown content on hover */
+    border-radius: 40px;
+}
+  
+  /* Styles for the search input */
+  .container-input {
     position: relative;
-}
-
-.input-search {
-    width: 100px;
-    padding: 10px 0px 10px 20px;
+    margin-right: 25px;
+  }
+  
+  .input-search {
     border-radius: 9999px;
     border: solid 1px #333;
     transition: all .2s ease-in-out;
-    outline: none;
-    opacity: 0.8;
-}
-
-.container-input svg {
+    outline: none; /* Removes the outline on focus */
+    padding: 10px 0px 10px 20px;
+    background: gainsboro;
+  }
+  
+  .search-icon {
+    background-image: url('images/search.png'); /* Replace with your search icon SVG path */
+    background-size: contain; /* Ensures the icon scales properly */
+    background-repeat: no-repeat; /* Prevents the icon from repeating */
+    width: 20px; /* Sets the width of the icon */
+    height: 20px; /* Sets the height of the icon */
+    
     position: absolute;
     top: 50%;
-    left: 10px;
+    right: 10px; /* Adjust the position of the icon as needed */
+    transform: translate(0, -50%);
+  }
+
+  .container-input svg {
+    position: absolute;
+    top: 50%;
+    left: 100%;
     transform: translate(0, -50%);
 }
 
-.input-search :focus{
-    opacity: 1;
-    width: 300px;
+.input-search:focus {
+    width: 200px;
 }
-
-/*                          pick up from here*/
-
-.nav-bar {
-    display: flex;
-    align-items: center;
+  
+  /* Styles for the log in button */
+  .logging-btn a {
+    background-color: #fff; /* Sets the background color for the button */
+    color: black; /* Sets the text color for the button */
+    padding: 8px 16px; /* Adds padding inside the button */
+    border-radius: 20px; /* Rounds the corners of the button */
+    text-decoration: none; /* Removes underline from the link */
+    transition: background-color 0.3s ease; /* Adds a smooth transition for background color */
 }
-.nav-bar ul {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    margin-left: auto;
-}
-.nav-bar li {
-    margin: 0 10px;
-    position: relative;
-}
-.nav-bar a {
-    padding: 10px 15px;
-    transition: color 0.3s;
-}
-.nav-bar a:hover {
-    color: #007BFF;
-}
-.nav-header a {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-}
-.dropdown-content {
-    display: none;
-    position: absolute;
-    top: 40px;
-    left: 0;
-    background: #fff;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-.dropdown-content a {
-    display: block;
-    padding: 10px 20px;
-    white-space: nowrap;
-}
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-.logging-btn {
-    margin-left: auto;
-}
+  
+  .logging-btn a:hover {
+    background-color: #ddd; /* Changes the background color on hover for the button */
+  }
+  
+  /* Responsive styles for mobile view */
+  @media (max-width: 330px) {
+    .nav-toggle {
+      display: block; /* Shows the hamburger menu on mobile view */
+    }
+  
+    #nav-menu {
+      display: none; /* Hides the navigation menu on mobile view */
+      flex-direction: column; /* Displays the list items vertically */
+      width: 100%; /* Sets the width of the menu to 100% */
+    }
+  
+    #nav-menu li {
+      text-align: center; /* Centers the text inside the list items */
+    }
+  
+    #nav-menu.show {
+      display: flex; /* Shows the navigation menu when toggled */
+    }
+  
+    .dropdown-content {
+      position: static; /* Positions the dropdown content statically */
+      box-shadow: none; /* Removes the drop shadow */
+    }
+  }
 
 /* Hero Section */
 .home-page {
@@ -128,7 +217,7 @@ nav {
     transition: background 0.3s;
 }
 .btn-primary:hover {
-    background: #0056b3;
+    background: #6a888c;
 }
 
 /* Responsive Styles */
@@ -169,10 +258,10 @@ nav {
 
 
 /*    SERVICES PAGE   */
-  .key-features {
+.key-features {
     text-align: center;
     padding: 50px;
-    background-color: #f9f9f9;
+    background: linear-gradient(to bottom, #ffffff, #705D56); /* Fades from black to white */
 }
 .key-features h2 {
     font-size: 36px;
@@ -184,15 +273,88 @@ nav {
     gap: 30px;
 }
 .feature-box {
-    background: white;
+    position: relative; /* Necessary for stacking */
+    overflow: hidden; /* Ensure that the blur doesn't overflow */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(37, 0, 245, 0.1);
-    transition: transform 0.3s;
+    transition: transform 0.7s;
 }
+
+/* Blurred background */
+#task-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/task.jfif'); /* Path to the first image */
+    background-size: cover; /* Adjust as needed */
+    filter: blur(5px); /* Initial blur effect */
+    transition: filter 0.3s; /* Add transition for smooth effect */
+}
+
+#task-box:hover::before {
+    filter: blur(0);
+}
+
+#report-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/reports.jfif'); /* Path to the second image */
+    background-size: cover; /* Adjust as needed */
+    filter: blur(5px); /* Initial blur effect */
+    transition: filter 0.3s; /* Add transition for smooth effect */
+}
+
+#report-box:hover::before {
+    filter: blur(0);
+}
+
+#communication-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/communication.jfif'); /* Path to the second image */
+    background-size: cover; /* Adjust as needed */
+    filter: blur(5px); /* Initial blur effect */
+    transition: filter 0.3s; /* Add transition for smooth effect */
+}
+
+#communication-box:hover::before {
+    filter: blur(0);
+}
+
+#request-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/request.jfif'); /* Path to the second image */
+    background-size: cover; /* Adjust as needed */
+    filter: blur(5px); /* Initial blur effect */
+    transition: filter 0.3s; /* Add transition for smooth effect */
+}
+
+#request-box:hover::before {
+    filter: blur(0);
+}
+
+/* Transform on hover */
 .feature-box:hover {
     transform: translateY(-17px);
 }
+
 .feature-icon {
     width: 60px;
     height: 60px;
@@ -207,11 +369,20 @@ nav {
     color: #555;
 }
 
+/* Clear text */
+.feature-title,
+.feature-description,
+.feature-icon {
+    position: relative;
+    z-index: 1; /* Ensure text is on top of the blurred image */
+    color: black; /* Adjust text color as needed */
+}
 
 /*  STATISTICS  */
 .statistics-section {
     text-align: center;
     padding: 50px;
+    background: linear-gradient(to bottom, #705D56, #ffffff); /* Fades from black to white */
 }
 .statistics-section h2 {
     margin-bottom: 40px;
@@ -222,14 +393,10 @@ nav {
     gap: 20px; /* Add gap between cards */
 }
 
-.metric-icon {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 20px;
-}
 .metric-title {
     font-size: 24px;
     margin-bottom: 10px;
+    color: white;
 }
 .metric-value {
     font-size: 36px;
@@ -252,9 +419,23 @@ nav {
     margin: 10px; /* Add margin between cards */
 }
 
-.card:hover {
-    transform: scale(1.05); /* Slightly scale up the card */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+
+.card:hover .metric-title {
+    filter: blur(7px);
+    transform: scale(1.5); /* Slightly scale up the card */
+    transition: 1.5s;
+}
+
+.card:hover .metric-description {
+    filter: blur(7px);
+    transform: scale(1.5); /* Slightly scale up the card */
+    transition: 1.5s;
+}
+
+.card:hover .metric-value {
+    filter: blur(1px);
+    transform: scale(1.5); /* Slightly scale up the card */
+    transition: 1.5s;
 }
 
 .card .image-box {
@@ -262,6 +443,10 @@ nav {
     height: 100%;
     border-radius: inherit;
     overflow: hidden; /* Ensure the image stays within the image-box */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0; /* Ensure the image is below the text */
 }
 
 .card .image-box img {
@@ -271,10 +456,12 @@ nav {
     object-position: 50% 50%;
     border-radius: inherit;
     transition: transform 0.5s ease-in-out; /* Transition for image transform */
+    filter: blur(5px); /* Initial blur effect */
 }
 
 .card:hover .image-box img {
     transform: scale(1.1); /* Zoom in the image */
+    filter: blur(0); /* Remove blur on hover */
 }
 
 .card .content {
@@ -289,33 +476,29 @@ nav {
     flex-direction: column; /* Stack children vertically */
     justify-content: center; /* Center vertically */
     align-items: center; /* Center horizontally */
-    
+    z-index: 1;
     color: black;
     padding: 20px; /* Adjust padding as needed */
     box-sizing: border-box;
     text-align: center;
-    opacity: 0; /* Initially invisible */
+    opacity: 1; /* Initially invisible */
     transition: opacity 0.3s ease; /* Transition for opacity */
 }
-
-.card:hover .content {
-    opacity: 1; /* Make content visible on hover */
-}
-
 
 /*  CALL TO ACTION  */
 .cta-section {
     text-align: center;
     padding-left: 300px;
     padding-right: 300px;
+    background: transparent; /* Fades from black to white */
 }
 
-.cta-buttons {
+.cta-buttons a{
     display: flex;
     justify-content: center;
     gap: 20px;
 }
-.cta-button {
+.cta-button a{
     border: none;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -340,9 +523,9 @@ nav {
 
 /*  ABOUT   */
 .about-container {
-    width: 80%;
     margin: auto;
     overflow: hidden;
+    background: linear-gradient(to bottom, #ffffff, #3586ff); /* Fades from black to white */
 }
 
 .about-header {
@@ -392,10 +575,15 @@ nav {
 }
 
 /*  CANTACT */
+.contact {
+    background: linear-gradient(to bottom, #3586ff, #ffffff); /* Fades from black to white */
+}
+
 .contact-container {
     width: 80%;
     margin: auto;
     overflow: hidden;
+    
 }
 .contact-header {
     text-align: center;
@@ -448,11 +636,10 @@ nav {
     border: none;
 }
 
-
 /*  SIGN IN PAGE    */
 
 .login-section {
-    /*  background-color: #1055bd;  */
+    background: linear-gradient(to bottom, #ffffff, #3586ff, #ffffff); 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -469,6 +656,7 @@ nav {
     width: 60%;
     max-width: 60%;
     min-height: 350px;
+    margin: 20px
   }
   
   .form-container {
