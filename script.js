@@ -54,22 +54,10 @@ forgotPasswordForm.addEventListener('submit', (e) => {
   alert("Password reset email sent! Check your inbox.");
 });
 
-/*
-//  STATISTICS
-
-// Example JavaScript to update metrics dynamically (mock data)
-function updateMetrics() {
-    document.getElementById('task-completion').textContent = `${Math.floor(Math.random() * 100)}%`;
-    document.getElementById('customer-satisfaction').textContent = `${Math.floor(Math.random() * 100)}%`;
-    document.getElementById('workforce-efficiency').textContent = `${Math.floor(Math.random() * 100)}%`;
-}
-
-setInterval(updateMetrics, 5000); // Update metrics every 5 seconds
-*/
-
 //  Header Navigation
 
 function toggleMenu() {
   const navMenu = document.getElementById('nav-menu');
   navMenu.classList.toggle('show');
 }
+

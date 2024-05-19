@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 
@@ -32,7 +33,9 @@ nav {
     display: flex; /* Displays the elements inside the nav-bar as a flex container */
     justify-content: space-between; /* Distributes the child elements evenly along the main axis */
     align-items: center; /* Centers the child elements along the cross axis */
-
+    height: 25px;
+    transition: background-color 0.3s ease;
+    margin: 5px;
 }
   
   /* Styles for the website logo/title */
@@ -40,14 +43,15 @@ nav {
     color: black; /* Sets the text color for the logo/title */
     text-decoration: none; /* Removes underline from the link */
     font-size: 24px; /* Increases the font size */
-    font-weight: bold; /* Makes the text bold */
+    font-weight: bolder; /* Makes the text bold */
   }
   
   /* Styles for the hamburger menu */
   .nav-toggle {
     display: none; /* Initially hidden for desktop view */
     cursor: pointer; /* Changes the cursor to a pointer on hover */
-  }
+    font-weight: bolder; /* Makes the text bold */
+}
   
   .nav-toggle span {
     display: block; /* Displays the spans as block elements */
@@ -63,6 +67,7 @@ nav {
     list-style: none; /* Removes default bullet points */
     margin: 0; /* Removes default margin */
     padding: 0; /* Removes default padding */
+    font-weight: bolder; /* Makes the text bold */
   }
   
   #nav-menu li {
@@ -122,6 +127,7 @@ nav {
     transition: all .2s ease-in-out;
     outline: none; /* Removes the outline on focus */
     padding: 10px 0px 10px 20px;
+    width: 100px;
     background: gainsboro;
   }
   
@@ -261,7 +267,7 @@ nav {
 .key-features {
     text-align: center;
     padding: 50px;
-    background: linear-gradient(to bottom, #ffffff, #705D56); /* Fades from black to white */
+    background: linear-gradient(to bottom, #ffffff, #E6C8AD); /* Fades from black to white */
 }
 .key-features h2 {
     font-size: 36px;
@@ -382,7 +388,7 @@ nav {
 .statistics-section {
     text-align: center;
     padding: 50px;
-    background: linear-gradient(to bottom, #705D56, #ffffff); /* Fades from black to white */
+    background: linear-gradient(to bottom, #E6C8AD, #ffffff); /* Fades from black to white */
 }
 .statistics-section h2 {
     margin-bottom: 40px;
@@ -487,9 +493,10 @@ nav {
 
 /*  CALL TO ACTION  */
 .cta-section {
+    color: black;
     text-align: center;
-    padding-left: 300px;
-    padding-right: 300px;
+    padding-left: 30px;
+    padding-right: 30px;
     background: transparent; /* Fades from black to white */
 }
 
@@ -504,20 +511,20 @@ nav {
     transition: background-color 0.3s;
 }
 .cta-button.primary {
-    background-color: #007bff; /* Blue background for primary button */
-    color: white;
+    background-color: transparent;
+    color: black;
+    border: 1px solid black;
 }
 .cta-button.primary:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #8879743f; 
 }
 .cta-button.secondary {
     background-color: transparent;
-    color: #007bff;
-    border: 2px solid #007bff;
+    color: black;
+    border: 1px solid black;
 }
 .cta-button.secondary:hover {
-    background-color: #007bff;
-    color: white;
+    background-color: #8879743f;
 }
 
 
@@ -525,7 +532,8 @@ nav {
 .about-container {
     margin: auto;
     overflow: hidden;
-    background: linear-gradient(to bottom, #ffffff, #3586ff); /* Fades from black to white */
+    text-align: center;
+    background: linear-gradient(to bottom, #ffffff, #606060); /* Fades from black to white */
 }
 
 .about-header {
@@ -544,19 +552,16 @@ nav {
 .about-section h2 {
     font-size: 28px;
     margin-bottom: 10px;
-    color: #333;
 }
 .about-section p {
-    font-size: 18px;
-    color: #555;
+    font-size: 14px;
 }
 
 .team-member {
     text-align: center;
-    margin: 20px 0;
+    margin: 15px;
     display: inline-block;
-    width: 100px; /* Example width */
-    margin-right: 60px; /* Optional: Add spacing between items */
+    
 }
 .team-member img {
     border-radius: 50%;
@@ -567,16 +572,14 @@ nav {
 .team-member h3 {
     margin: 0;
     font-size: 20px;
-    color: #333;
 }
 .team-member p {
     font-size: 16px;
-    color: #555;
 }
 
 /*  CANTACT */
 .contact {
-    background: linear-gradient(to bottom, #3586ff, #ffffff); /* Fades from black to white */
+    background: linear-gradient(to bottom, #606060, #ffffff); /* Fades from black to white */
 }
 
 .contact-container {
@@ -644,28 +647,36 @@ nav {
     justify-content: center;
     align-items: center;
     height: 100vh; /* Ensure the parent takes full height of the viewport */
-    
 }
 
 .container {
-    background-color: #fff;
-    border-radius: 30px;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-    position: relative;
-    overflow: hidden;
-    width: 60%;
-    max-width: 60%;
-    min-height: 350px;
-    margin: 20px
-  }
-  
+  background-color: #fff;
+  border-radius: 30px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  position: relative;
+  overflow: hidden;
+  width: 60%;
+  max-width: 60%;
+  min-height: 350px;
+  margin: 20px
+}
+
   .form-container {
-    position: absolute;
-    top: 0;
-    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 45px;
     transition: all 1.5s ease-in-out;
   }
   
+  .sign-in-container, .sign-up-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+}
+
   .sign-in-container {
     left: 0;
     width: 50%;
@@ -744,8 +755,37 @@ nav {
     transform: translateX(0);
     transition: transform 0.6s ease-in-out;
   }
+.radio-group {
+  display: flex; /* Use flex to arrange radio buttons inline */
+  gap: 10px; /* Optional: spacing between radio buttons */
+}
+
+.radio-group label {
+    display: block;
+    align-items: center;
+    margin-right: 0; /* Remove bottom margin */
+}
+.radio-group input[type="radio"] {
+  margin-left: 15px;
+  transform: scale(1.2); /* Adjust scale to resize radio buttons */
+  margin-right: 5px; /* Optional: space between radio button and label text */
+}
+
+/* Optional: Align the text with the resized radio button */
+.radio-group label {
+  color: gray;
+  margin-right: 5px;
+  font-size: 11px; /* Adjust font size if needed */
+  margin-bottom: 0; /* Remove bottom margin */
+}
+
+/* Apply margin to the last radio button label */
+.radio-group label:first-child {
+  margin-right: 1px; /* Adjust the margin as needed */
+  margin-left: 1px; /* Adjust the margin as needed */
+}
   
-  .container.right-panel-active .overlay {
+.container.right-panel-active .overlay {
     transform: translateX(50%);
   }
   
@@ -782,17 +822,23 @@ nav {
   
   h1 {
     font-weight: bold;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
   }
   
   input {
+    border-radius: 20px;
     background-color: #f0f0f0;
     border: none;
-    padding: 12px 15px;
-    margin: 8px 0;
-    width: 100%;
-  }
-  
+    padding: 10px 12px; /* Slightly smaller padding */
+    margin: 5px 0;
+    width: 44%; /* Adjusted width */
+}
+
+label {
+  display: flex;
+  width: 8%;
+}  
+
   button {
     border-radius: 20px;
     border: 1px solid #3586ff;
@@ -800,8 +846,9 @@ nav {
     color: #fff;
     font-size: 16px;
     font-weight: bold;
-    padding: 12px 0;
-    width: 100%;
+    padding: 10px 12px;
+    width: 50%;
+    margin-top: 20px;
     cursor: pointer;
   }
   
@@ -840,7 +887,7 @@ footer {
 
     
     color: #000000;
-    font-size: 12px;
+    font-size: 15px;
 }
 
 .social-media img {

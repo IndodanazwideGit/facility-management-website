@@ -92,7 +92,7 @@
                 <br>
                 <!-- Call-to-action section -->
                 <div class="cta-section">
-                    <h3>Ready to Enhance Your Facility Management?</h3>
+                    <h2>Ready to Enhance Your Facility Management?</h2>
                     <div class="cta-buttons">
                         <a href="#login-section"><button class="cta-button primary">Submit Service Request</button></a>
                         <a href="#about"><button class="cta-button secondary">Learn More</button></a>
@@ -144,9 +144,6 @@
                     </div>
                 </div>
             </div>
-
-            <!--    ABOUT       -->
-            
         </section>
         <br>
         <br>
@@ -244,20 +241,40 @@
 
         <!-- Login section -->
         <section class="login-section" id="login-section">
-            <div>
+            <div class="create-account-text">
                 <h2>Create an account</h2>
-                <p>Become our loyal customer and earn special gifts</p>
+                <p>
+                    Become our loyal customer 
+                </p>
+                <p>
+                    and earn special gifts
+                </p>
 
             </div>
             <div class="container" id="container">
                 <!-- Sign up form -->
                 <div class="form-container sign-up-container">
-                  <form id="signUpForm">
+                  <form class="signUpForm" id="signUpForm">
                     <h1>Create Account</h1>
                     <input type="text" placeholder="Name" id="name" required/>
                     <input type="email" placeholder="Email" id="email" required/>
                     <input type="tel" placeholder="Phone" id="phone" required/>
                     <input type="password" placeholder="Password" id="password" required/>
+
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="role" value="Admin"> Admin
+                        </label>
+                        <label>
+                            <input type="radio" name="role" value="Security"> Security
+                        </label>
+                        <label>
+                            <input type="radio" name="role" value="Cleaner"> Cleaner
+                        </label>
+                        <label>
+                            <input type="radio" name="role" value="Customer"> Customer
+                        </label>
+                    </div>
                     <button type="submit">Sign Up</button>
                   </form>
                 </div>
@@ -268,6 +285,7 @@
                     <input type="email" placeholder="Email" id="emailLogin" required/>
                     <input type="password" placeholder="Password" id="passwordLogin" required/>
                     <button type="submit">Sign In</button>
+                    <br>
                     <a href="#">Forgot your password?</a>
                   </form>
                 </div>
@@ -287,7 +305,7 @@
                     </div>
                   </div>
                 </div>
-              </div>
+            </div>
         </section>
 
     </main>
